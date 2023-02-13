@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/mesa-de-trabalho.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*calculadora*/
+.calculadora-completa {
+  background: linear-gradient(120deg, #999999, #cfcfcf);
+  border: 2.5px solid rgba(255, 255, 255, 0.137);
+  border-radius: 12px;
+  box-shadow: 0px 0px 2px 1.5px rgb(53, 53, 53);
+  border-radius: 30px;
+  width: 350px;
+  height: 600px;
+  padding: 20px;
+  box-shadow: 6px 5px 15px 10px rgb(27, 27, 27);
+}
+
+.calculadora-completa.dark {
+  background: linear-gradient(120deg, #242424, #353535);
+  border: 3px solid rgba(34, 34, 34, 0.007);
+}
+
+.parte-superior {
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+}
+
+.logo {
+  display: flex;
+  height: 40%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h2 {
+  font-family: 'Share Tech', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgb(56, 56, 56);
+}
+
+.logo h2.dark {
+  color: rgb(94, 94, 94);
+}
+
+.selo {
+  width: 35%;
+  height: 70%;
+  background: rgb(32, 37, 1);
+  border-radius: 7px;
+}
+
+.tela-desligada {
+  width: 100%;
+  height: 60%;
+  background: rgb(39, 43, 34);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  padding: 5px;
+  border: 2.5px solid rgba(20, 20, 20, 0.11);
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 5px 5px rgba(17, 17, 17, 0.541);
+}
+
+.tela-ligada {
+  width: 100%;
+  height: 60%;
+  background: rgb(117, 129, 72);
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 2px solid rgba(146, 142, 142, 0.767);
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 5px 3px rgba(56, 56, 51, 0.541);
+  display: none;
+}
+
+.tela-ligada.dark {
+  border: 2.5px solid rgba(26, 26, 26, 0.527);
+}
+
+.resultado {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  color: rgb(59, 61, 38);
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 2px;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.teclas {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prim-fileira,
+.seg-fileira,
+.ter-fileira,
+.qua-fileira,
+.qui-fileira {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prim-fileira {
+  height: 40px;
+}
+
+button {
+  width: 70px;
+  height: 70px;
+  font-family: 'Share Tech', sans-serif;
+  font-weight: 300;
+  color: rgb(70, 69, 69);
+  font-size: 30px;
+  background: linear-gradient(120deg, #999999, #cfcfcf);
+  border: 2.5px solid rgba(224, 224, 224, 0.027);
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px 1.5px rgb(73, 73, 73);
+}
+
+button:active:not(.btn-tema) {
+  transform: scale(0.98);
+  box-shadow: 0px 0px 2.5px 2px rgb(53, 53, 53);
+  border: 3px solid rgba(255, 255, 255, 0.027);
+  background: linear-gradient(120deg, #8f8f8f, #c7c7c7);
+  color: #3b3b3b;
+  border-radius: 21px;
+}
+
+button.dark {
+  background: linear-gradient(120deg, #1b1b1b, #2c2c2c);
+  border: 3px solid rgba(44, 44, 44, 0.178);
+  box-shadow: 1px 1px 3px 1.5px rgb(22, 22, 22);
+  color: rgb(94, 94, 94);
+}
+
+button:active:not(.btn-tema).dark {
+  transform: scale(0.98);
+  box-shadow: 1px 1px 3px 1.5px rgb(22, 22, 22);
+  border: 3px solid rgba(255, 255, 255, 0.027);
+  background: linear-gradient(120deg, #1b1b1b, #2c2c2c);
+  color: rgb(94, 94, 94);
+  border-radius: 21px;
+}
+
+.btn-tema,
+.btn-liga-desliga,
+.btn-clean,
+.btn-porcento {
+  height: 40px;
+  font-size: 17px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.btn-tema {
+  height: 43px;
+  width: 70px;
+  padding: 1%;
+  background: #999999;
+  box-shadow: inset 0px 0px 6px 3px rgba(17, 17, 17, 0.541);
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border: 2.5px solid rgba(245, 245, 245, 0.192);
+}
+
+.btn-tema.dark {
+  background: #252525;
+  border: 2.5px solid rgba(44, 44, 44, 0.048);
+}
+
+.switch-ball {
+  background-color: #aaaaaa;
+  height: 36px;
+  width: 36px;
+  border-radius: 20px;
+  border: 2px solid rgba(189, 188, 188, 0.336);
+  box-shadow: 1px 1px 3px 1.5px rgb(73, 73, 73);
+  margin: 0;
+  transition: 0.15s transform linear;
+}
+
+.switch-ball.dark {
+  background: radial-gradient(#3a3a3a, #2e2e2e);
+  border: 3px solid rgba(29, 29, 29, 0.178);
+  box-shadow: 1px 1px 3px 1.5px rgb(22, 22, 22);
+  color: rgb(78, 78, 78);
+}
+
+.checkbox:checked + .btn-tema .switch-ball {
+  transform: translatex(28px);
+}
