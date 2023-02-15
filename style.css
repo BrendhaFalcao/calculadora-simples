@@ -10,7 +10,7 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-image: url(/mesa-de-trabalho.jpg);
+  background-image: url(mesa-de-trabalho.jpg);
   background-size: cover;
   background-position: center;
 }
